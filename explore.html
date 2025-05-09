@@ -19,6 +19,32 @@
     </nav>
   </header>
 
+  <main>
+    <section>
+      <h1>Explore Countries by Region</h1>
+      <p>Discover different countries grouped by continents and regions. Here's a glimpse:</p>
+      <div class="explore-grid">
+        <div class="explore-card" onclick="loadRegion('Europe')">
+          <img src="https://flagcdn.com/w320/fr.png" alt="France" />
+          <h2>Europe</h2>
+          <p>Explore the rich history, architecture, and culture across European nations.</p>
+        </div>
+        <div class="explore-card" onclick="loadRegion('Africa')">
+          <img src="https://flagcdn.com/w320/za.png" alt="South Africa" />
+          <h2>Africa</h2>
+          <p>Vibrant cultures and stunning natural landscapes await you in Africa.</p>
+        </div>
+        <div class="explore-card" onclick="loadRegion('Asia')">
+          <img src="https://flagcdn.com/w320/jp.png" alt="Japan" />
+          <h2>Asia</h2>
+          <p>From ancient traditions to modern marvels, Asia offers a dynamic experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="region-info"></section>
+  </main>
+
 
   <footer>
     <p>&copy; 2025 GeoGlance</p>
