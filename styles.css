@@ -1,0 +1,225 @@
+:root {
+    --bg-color: #f4f4f9;
+    --text-color: #333;
+    --card-bg: white;
+    --nav-bg: rgba(0, 0, 51, 0.9);
+    --button-bg: #0055aa;
+    --button-hover: #003d80;
+  }
+  
+  body.dark {
+    --bg-color: #1e1e2f;
+    --text-color: #f1f1f1;
+    --card-bg: #2d2d44;
+    --nav-bg: rgba(18, 18, 42, 0.95);
+    --button-bg: #4464c4;
+    --button-hover: #3343a8;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--text-color);
+    background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  main {
+    flex: 1;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    margin: 1rem auto;
+    max-width: 1200px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-bg);
+    padding: 1rem 2rem;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  #toggleDark {
+    padding: 6px 10px;
+    background-color: var(--button-bg);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search-box {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  #countryInput {
+    width: 250px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #searchBtn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  #searchBtn:hover {
+    background-color: var(--button-hover);
+  }
+  
+  #resultContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .country-card {
+    background-color: var(--card-bg);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+    width: 300px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .country-card img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+  
+  .country-card h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .country-card p {
+    margin: 0.3rem 0;
+  }
+  
+
+  .loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #0077ff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 2rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+
+  #resetBtn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  #resetBtn:hover {
+    background-color: #555;
+  }
+  
+
+  .explore-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .explore-card {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    width: 280px;
+    text-align: center;
+  }
+  
+  .explore-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+  
+  .about-section {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+    background: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .about-img {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+  
+  footer {
+    background-color: var(--nav-bg);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
